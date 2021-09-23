@@ -4,28 +4,31 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>by.it.academy.marusevich</groupId>
+    <parent>
+        <groupId>by.it.academy.marusevich</groupId>
+        <artifactId>lecture-2</artifactId>
+        <relativePath>../pom.xml</relativePath>
+        <version>${revision}</version>
+    </parent>
+
+    <packaging>war</packaging>
+
     <artifactId>module-3-war</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>${parent.version}</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
-    <packaging>war</packaging>
     <dependencies>
         <dependency>
             <groupId>by.it.academy.marusevich</groupId>
             <artifactId>module-2-jar</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${parent.version}</version>
         </dependency>
     </dependencies>
-    <parent>
-        <groupId>by.it.academy.marusevich</groupId>
-        <artifactId>lecture-2</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
+
     <build>
         <pluginManagement>
             <plugins>
