@@ -1,0 +1,5 @@
+# Project exclude paths
+/module-1-jar/target/
+/module-2-jar/target/
+/module-3-war/target/
+/target/
